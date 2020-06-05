@@ -1,6 +1,6 @@
 package practice;
 
-public class one_two_three³ª¶óÀÇ¼ıÀÚ {
+public class one_two_threeÂ³ÂªÂ¶Ã³Ã€Ã‡Â¼Ã½Ã€Ãš {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
