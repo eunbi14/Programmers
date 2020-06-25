@@ -1,0 +1,21 @@
+//4 points
+class Solution {
+    public int solution(int n) {
+        int answer = 1;
+        for(int i=n-1;i>=1;i--){
+            int sum = 0;
+            for(int j=i;j>=1;j--){
+                sum+=j;
+                if(sum==n) {
+                    answer++;
+                    break;
+                }
+            
+                if(sum>n) {
+                    break;
+                }
+            }
+        }
+        return answer;
+    }
+}
