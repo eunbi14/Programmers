@@ -4,9 +4,8 @@ import java.util.*;
 
 class Solution {
     //7 points
-    // B 부분 없으면 테스트 2,3 실패
     // 시작시간 기준(A)은 왜 안 잡아줘도 되는건지
-    // B가 왜 필요한지
+    
     public int solution(String[] lines) {
         int answer = 0;
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
@@ -50,8 +49,7 @@ class Solution {
                 long etLong = endTime[j].getTime();
                 if(e<=stLong) continue;
                 if(stLong>=s&&stLong<e) count++;
-                else if(etLong>=s&&etLong<e) count++;  
-                // B
+                else if(etLong>=s&&etLong<e) count++;
                 else if(stLong<=s&&etLong>s) count++;
                 
             }
