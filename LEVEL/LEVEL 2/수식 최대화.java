@@ -1,11 +1,12 @@
 // 테스트케이스 11~15, 24, 27~29 통과를 못하는데 왠지 모르겠다.
+// operand ArrayList Type Integer -> Long 변경 후 해결
 
 import java.util.*;
 
 class Solution {
-    public static ArrayList<Integer> or_operand = new ArrayList<>();
+    public static ArrayList<Long> or_operand = new ArrayList<>();
     public static ArrayList<Character> or_operator = new ArrayList<>();
-    public static ArrayList<Integer> operand = new ArrayList<>();
+    public static ArrayList<Long> operand = new ArrayList<>();
     public static ArrayList<Character> operator = new ArrayList<>();
     public long solution(String expression) {
         
@@ -13,13 +14,13 @@ class Solution {
         for(int i=0;i<expression.length();i++){
             switch(expression.charAt(i)){
                 case '*': case '+': case '-': 
-                    or_operand.add(Integer.valueOf(expression.substring(index, i)));
+                    or_operand.add(Long.parseLong(expression.substring(index, i)));
                     index = i+1;
                     or_operator.add(expression.charAt(i));
                     break;
             }
         }
-        or_operand.add(Integer.valueOf(expression.substring(index)));
+        or_operand.add(Long.parseLong(expression.substring(index)));
         operator.addAll(or_operator);
         operand.addAll(or_operand);
         long answer = 0;
