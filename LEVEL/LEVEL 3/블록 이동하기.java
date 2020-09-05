@@ -27,13 +27,13 @@ class Solution {
        
         s.offer(new Robot(0, 0, 0, 1, 0));
        
-        dfs(s, board);
+        bfs(s, board);
         
        
         return answer;
     }
     
-    public void dfs(Queue<Robot> s, int[][] board){
+    public void bfs(Queue<Robot> s, int[][] board){
         
         if(flag) return;
         if(s.isEmpty())  return;
@@ -97,7 +97,7 @@ class Solution {
             }
         }
         
-        dfs(s, board);
+        bfs(s, board);
     }
     
     public void finish(int count){
