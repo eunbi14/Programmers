@@ -17,5 +17,7 @@ class Solution {
             out = out>answer[N-1][i]?out:answer[N-1][i];
         }
         return out;
+        // return Arrays.stream(answer[N-1]).max().getAsInt();
+        // for문 안돌리고 이렇게 쓸 수도 있다 근데 for문이 더 빠른듯
     }
 }
