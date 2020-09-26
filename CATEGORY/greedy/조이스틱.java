@@ -18,14 +18,14 @@ class Solution {
         int right = 0;
         int left = 0;
         
-        //오른쪽으로 쭉 가기
+        //왼쪽으로 쭉 가기 ex. BABCD
         int move = size - 1;
         for(int i=1;i<size;i++){
             if(name.charAt(i)=='A') move--;
             else break;
         }
         
-        //왼쪽으로 쭉 가기
+        //오른쪽으로 쭉 가기 ex. BCDAA
         int move2 = size - 1;
         for(int i=size-1;i>0;i--){
             if(name.charAt(i)=='A') move2--;
